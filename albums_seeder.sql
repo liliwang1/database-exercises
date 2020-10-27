@@ -1,4 +1,7 @@
 USE codeup_test_db;
+
+TRUNCATE albums;
+
 INSERT INTO albums (artist, name, release_date, sales, genre)
 VALUES ('Michael Jackson', 'Thriller', 1982, 47.3, 'Pop, Post-disco, Funk, Rock'),
        ('AC/DC', 'Back in Black', 1980, 29.4, 'Hard rock'),
@@ -34,4 +37,8 @@ VALUES ('Michael Jackson', 'Thriller', 1982, 47.3, 'Pop, Post-disco, Funk, Rock'
        ('Guns N'' Roses', 'Appetite for Destruction', 1987, 21.9, 'Hard rock');
 
 SHOW TABLES;
+
 DESCRIBE albums;
+
+SELECT *
+FROM albums;
