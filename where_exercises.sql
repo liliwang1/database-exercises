@@ -46,7 +46,7 @@ AND birth_date LIKE '%-12-25';
 
 SELECT *
 FROM employees
-WHERE last_name REGEXP '';
+WHERE last_name REGEXP 'q' AND last_name NOT REGEXP 'qu';
 
 SELECT *
 FROM employees
