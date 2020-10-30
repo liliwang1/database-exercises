@@ -25,9 +25,10 @@ WHERE s.to_date LIKE '9999%' AND dm.to_date LIKE '9999%';
 
 SELECT CONCAT(e.first_name,' ', e.last_name) AS 'employee_name',
        d.dept_name AS 'department_name',
-       CONCAT(e.first_name, ' ', e.last_name) AS 'manager_name'
+       CONCAT(em.first_name, ' ', em.last_name) AS 'manager_name'
 FROM employees e
 JOIN dept_emp de ON de.emp_no = e.emp_no
 JOIN departments d ON d.dept_no = de.dept_no
 JOIN dept_manager dm ON dm.dept_no = d.dept_no
+JOIN employees em ON em.emp_no = dm.emp_no
 WHERE de.to_date LIKE '9999%' AND dm.to_date LIKE '9999%';
