@@ -53,3 +53,8 @@ LEFT JOIN roles r ON r.id = u.role_id;
 SELECT *
 FROM users u
 RIGHT JOIN roles r ON r.id = u.role_id;
+
+SELECT r.name, COUNT(u.role_id) AS count
+FROM roles r
+LEFT JOIN users u ON r.id = u.role_id
+GROUP BY r.name;
