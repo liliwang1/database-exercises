@@ -23,6 +23,11 @@ FROM employees
 GROUP BY last_name, first_name HAVING COUNT(*) > 1
 ORDER BY COUNT(*) DESC;
 
+SELECT CONCAT(first_name, ' ', last_name) AS full_name, COUNT(*) AS count
+FROM employees
+GROUP BY last_name, first_name HAVING COUNT(*) > 1
+ORDER BY COUNT(*) DESC;
+
 SELECT COUNT(*) AS count, gender
 FROM employees
 WHERE first_name IN ('Irena', 'Vidya', 'Maya')
