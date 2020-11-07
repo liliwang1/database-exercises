@@ -68,7 +68,8 @@
 # Quizzes have one or more questions associated with them
 # Students (users) take quizzes
 # The application should record a student's answers for each question on the quiz
-
+# Queries
+#
 # For a given student, calculate their score on a given quiz.
 # For a given quiz, find how many students have taken it.
 # Bonus
